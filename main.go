@@ -3,5 +3,9 @@ package main
 import "log"
 
 func main() {
-	log.Fatalln("nothing to run!")
+	var game = NewGame(16, 16)
+
+	if err := game.Run(); err != nil {
+		log.Fatalln(err)
+	}
 }
